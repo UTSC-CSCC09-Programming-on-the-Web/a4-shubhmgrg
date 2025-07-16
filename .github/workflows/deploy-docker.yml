@@ -19,4 +19,4 @@ jobs:
         port: 22
         script: |
           sleep 180
-          docker-compose pull && docker-compose up -d
+          docker compose pull && docker compose up -d
