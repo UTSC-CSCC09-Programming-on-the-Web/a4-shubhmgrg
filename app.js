@@ -6,7 +6,7 @@ import { imagesRouter } from "./routes/images_router.js";
 import { userRouter } from "./routes/user_router.js";
 
 export const app = express();
-const PORT = 3000;
+const PORT = 80;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());

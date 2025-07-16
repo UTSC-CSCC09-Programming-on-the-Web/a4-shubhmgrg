@@ -24,11 +24,11 @@ services:
     environment:
       - DEFAULT_EMAIL=shubham.garg@mail.utoronto.ca
   backend:
-    image: ghcr.io/uoft-utsc-cs-sandbox/backend-shubhmgrg
+    image: ghcr.io/utsc-cscc09-programming-on-the-web/shubhmgrg-webgallery
     container_name: backend
     restart: always
     expose:
       - 3000
     environment:
-      - VIRTUAL_HOST=api.webgallery.shubham.taggit.tech
-      - LETSENCRYPT_HOST=api.webgallery.shubham.taggit.tech
+      - VIRTUAL_HOST=webgallery.shubham.taggit.tech
+      - LETSENCRYPT_HOST=webgallery.shubham.taggit.tech
