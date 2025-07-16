@@ -1,0 +1,211 @@
+/* Used Github copilot to generate color codes for the website to make it look better */
+
+.add-comment {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-top: 12px;
+}
+
+.comments {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  margin-left: auto;
+  margin-right: auto;
+  justify-self: center;
+  width: 70%;
+}
+
+.comments-title {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.add-comment form {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-form {
+  width: 100%;
+}
+
+.add-comment-text {
+  padding: 8px;
+  border: 0px;
+  border-bottom: 2px solid #ccc;
+  overflow-y: auto;
+  resize: vertical;
+  min-height: 36px;
+  font-size: 1.3em;
+  width: 100%;
+  margin-bottom: 2%;
+}
+
+.add-comment-author {
+  padding: 6px;
+  border: 0px;
+  border-bottom: 2px solid #ccc;
+  margin-right: calc(1 / 24 * 100%);
+  min-height: 36px;
+  font-size: 1em;
+  width: calc(9 / 12 * 100%);
+}
+
+.comment-element {
+  box-shadow: none;
+  transition: all 0.3s;
+}
+
+.comment-element:focus {
+  box-shadow: 0px 5px 3px 3px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1, 1.1);
+}
+
+.add-comment-head {
+  width: 100%;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.post-comment-btn {
+  width: calc(2 / 12 * 100%);
+  height: 36px;
+  align-self: center;
+  border: none;
+  margin-right: calc(1 / 24 * 100%);
+  border-radius: 4px;
+  background: #1976d2;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.post-comment-btn:hover {
+  background: #125ea8;
+}
+
+.comments-list {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-item {
+  background: #fff;
+  border-bottom: 2px solid gray;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+  padding: 8px 15px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-y: auto;
+}
+
+.comment-head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment-author {
+  font-weight: bold;
+  color: #1976d2;
+}
+
+.comment-date {
+  font-size: 0.95em;
+  color: #888;
+}
+
+.comment-body {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.comment-text {
+  flex: 2;
+  font-size: 1em;
+  color: #333;
+  word-break: break-word;
+}
+
+.comment-delete {
+  height: 30px;
+  width: 35px;
+  background-image: url("../media/delete.png"); /* Replace with your icon path */
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.comment-delete:hover {
+  opacity: 1;
+}
+
+.comment-loader {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.loader-small-icon {
+  width: 6vh;
+  height: 6vh;
+  border: 5px solid black; /* Light grey */
+  border-top: 5px solid #f9f9f9; /* Blue */
+  border-radius: 50%;
+  animation: comment-spin 1s linear infinite;
+}
+
+@keyframes comment-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.comment-error {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.error-small-icon {
+  width: 6vh;
+  height: 6vh;
+  background-image: url("../media/warning.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.hide-it {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .comments {
+    width: 100%;
+  }
+  .add-comment-text {
+    width: calc(10 / 12 * 100%);
+  }
+  .post-comment-btn {
+    width: calc(2 / 12 * 100%);
+    padding: 2px;
+  }
+}

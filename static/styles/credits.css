@@ -1,0 +1,18 @@
+.credits-page {
+  background-color: #eaeaea;
+  font-family: "Comic Sans MS", sans-serif;
+}
+
+.credits-page div {
+  margin: 10px;
+}
+
+.credits-link {
+  color: #1976d2;
+  font-size: large;
+  text-decoration: underline;
+}
+
+.credits {
+  cursor: pointer;
+}

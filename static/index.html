@@ -1,0 +1,227 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Web Gallery</title>
+    <link href="styles/cols.css" rel="stylesheet" type="text/css" />
+    <link href="styles/main.css" rel="stylesheet" type="text/css" />
+    <link href="styles/form.css" rel="stylesheet" type="text/css" />
+    <link href="styles/images.css" rel="stylesheet" type="text/css" />
+    <link href="styles/comments.css" rel="stylesheet" type="text/css" />
+    <link href="styles/credits.css" rel="stylesheet" type="text/css" />
+    <link href="styles/signup.css" rel="stylesheet" type="text/css" />
+    <link href="styles/galleries.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header id="headline">
+      <div class="header-content">Shubham's Web Gallery</div>
+      <div class="header-actions">
+        <button class="head-btn hidden" id="back-btn">Back</button>
+        <button class="head-btn" id="auth-btn">Login or Signup</button>
+        <button class="head-btn hidden" id="logout-btn">Sign out</button>
+      </div>
+    </header>
+    <div class="main-body hidden">
+      <div class="edit-image">
+        <button class="btn" id="image-add-btn">Add Image</button>
+        <button class="btn" id="image-delete-btn">Delete Image</button>
+      </div>
+      <div class="file-validate validate hidden-msg">
+        <div class="validate-msg file-validate-msg">
+          The file submitted is not in the right format. Make sure to submit
+          either JPG or PNG files.
+        </div>
+        <div class="validate-delete valid-delete"></div>
+      </div>
+
+      <div class="img-validate validate hidden-msg">
+        <div class="validate-msg img-validate-msg">
+          Please make sure to fill all the fields in the correct format before
+          submitting the form.
+        </div>
+        <div class="valid-delete empty-img-delete"></div>
+      </div>
+
+      <form class="image-form" id="image-adder" enctype="multipart/form-data">
+        <input
+          type="text"
+          class="form-element"
+          placeholder="Title"
+          name="title"
+          required
+        />
+        <input
+          type="file"
+          class="form-element"
+          accept=".jpg,.png"
+          name="picture"
+          required
+        />
+        <button type="submit" class="btn">Add</button>
+      </form>
+      <div class="images row" id="image-display">
+        <div class="left-arrow icon col-1"></div>
+        <div class="icon-viewer hidden">
+          <div class="loader-icon"></div>
+        </div>
+        <div class="error-viewer hidden">
+          <div class="error-icon"></div>
+          <div class="img-error-msg">
+            There seems to be an error. Please try again later.
+          </div>
+        </div>
+        <div id="image-viewer" class="col-10 image-viewer"></div>
+        <div class="right-arrow icon col-1"></div>
+      </div>
+      <div class="comment-validate validate hidden-msg">
+        <div class="validate-msg comment-validate-msg">
+          Please make sure to fill all the fields before submitting the form.
+        </div>
+        <div class="valid-delete empty-comment-delete"></div>
+      </div>
+      <div class="comments" id="comments">
+        <div class="comments-title">Comments</div>
+        <div class="add-comment" id="commenter">
+          <form class="comment-form" id="comment-adder">
+            <textarea
+              class="add-comment-text comment-element"
+              placeholder="Add comment"
+              name="added_comment"
+              required
+            ></textarea>
+            <button type="submit" class="post-comment-btn btn">Post</button>
+          </form>
+        </div>
+        <div class="comments-list" id="comments-list"></div>
+        <div class="comment-loader hide-it">
+          <div class="loader-small-icon"></div>
+        </div>
+        <div class="comment-error hide-it">
+          <div class="error-small-icon"></div>
+          <div>There seems to be an error. Please try again later.</div>
+        </div>
+      </div>
+      <div class="empty-space" id="no-image-text">
+        No images added. Add an image to display it.
+      </div>
+    </div>
+    <div class="signup-page hidden-form">
+      <div class="signup-validate validate hidden-form">
+        <div class="validate-msg signup-validate-msg">
+          Please make sure to fill all the fields before submitting the form.
+        </div>
+        <div class="valid-delete empty-signup-delete"></div>
+      </div>
+      <form class="auth-form">
+        <input
+          type="text"
+          class="auth-element"
+          placeholder="Username"
+          name="username"
+          required
+        />
+        <input
+          type="password"
+          class="auth-element"
+          placeholder="Password"
+          name="password"
+          required
+        />
+        <span class="authBtns">
+          <button type="button" class="btn" id="login-auth-btn">Log In</button>
+          <button type="button" class="btn" id="signup-auth-btn">
+            Sign Up
+          </button>
+        </span>
+      </form>
+    </div>
+
+    <!------------------------Credits------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------->
+
+    <div class="credits-page hidden">
+      <h1>Credits</h1>
+
+      <h2>Icons</h2>
+      <div>
+        <a href="https://www.flaticon.com/free-icons/back" title="back icons"
+          >Back icons created by Roundicons - Flaticon</a
+        >
+      </div>
+      <div>
+        <a href="https://www.flaticon.com/free-icons/next" title="next icons"
+          >Next icons created by Roundicons - Flaticon</a
+        >
+      </div>
+
+      <div>
+        <a href="https://www.flaticon.com/free-icons/error" title="error icons"
+          >Error icons created by Picons - Flaticon</a
+        >
+      </div>
+
+      <div>
+        <a href="https://www.flaticon.com/free-icons/cross" title="cross icons"
+          >Cross icons created by Pixelmeetup - Flaticon</a
+        >
+      </div>
+
+      <div>
+        <a
+          href="https://www.flaticon.com/free-icons/trash-can"
+          title="trash can icons"
+          >Trash can icons created by Irfansusanto20 - Flaticon</a
+        >
+      </div>
+      <div>
+        <a href="https://www.flaticon.com/free-icons/next" title="next icons"
+          >Next icons created by icon_small - Flaticon</a
+        >
+      </div>
+      <div>
+        <a
+          href="https://www.flaticon.com/free-icons/previous"
+          title="previous icons"
+          >Previous icons created by icon_small - Flaticon</a
+        >
+      </div>
+
+      <h2>HTML, CSS, Javascript Code</h2>
+      <div>
+        <a href="http://w3schools.com/">W3Schools tutorials</a>
+      </div>
+    </div>
+
+    <!-------------------------------------------------------------------------------------->
+
+    <div class="galleries">
+      <h1>Galleries</h1>
+      <div class="gallery-error hidden">
+        <div class="error-icon"></div>
+        <div>There seems to be an error. Please try again later.</div>
+      </div>
+      <div class="gallery-loader">
+        <div class="loader-icon"></div>
+      </div>
+      <div class="user-gallery hidden">Your Gallery</div>
+      <div class="gallery-container"></div>
+      <div class="gallery-pagination">
+        <div class="prev-gallery-page pagination-btn"></div>
+        <div class="gallery-page-number">1</div>
+        <div class="next-gallery-page pagination-btn"></div>
+      </div>
+    </div>
+
+    <div class="credits">
+      <div class="credits-link">Credits</div>
+    </div>
+
+    <script src="js/meact.js"></script>
+    <script src="js/api-service.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

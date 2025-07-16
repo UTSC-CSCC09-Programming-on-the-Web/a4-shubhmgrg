@@ -1,0 +1,122 @@
+/* Galleries Section */
+.galleries {
+  max-width: 700px;
+  background: #fafafa;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  padding: 10px 10px;
+  justify-self: center;
+}
+
+.galleries h1 {
+  font-size: 2rem;
+  margin-bottom: 24px;
+  color: #333;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.gallery-container {
+  padding: 5px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.gallery-loader {
+  justify-self: center;
+}
+
+.user-gallery {
+  background: #e3f2fd;
+  border-radius: 8px;
+  padding: 20px 28px;
+  font-size: 1.25rem;
+  color: #1976d2;
+  font-weight: bold;
+  margin-bottom: 24px;
+  text-align: center;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
+  width: 80%;
+  justify-self: center;
+  border: 2px solid #90caf9;
+  cursor: pointer;
+}
+
+.user-gallery:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.13);
+  transform: translateY(-4px) scale(1.03);
+  background: #f0f8ff;
+}
+
+.gallery-error {
+  width: calc(10 / 12 * 100%);
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.gallery-item {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+  padding: 24px 32px;
+  font-size: 1.2rem;
+  color: #222;
+  min-width: 220px;
+  text-align: center;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
+  cursor: pointer;
+}
+
+.gallery-item:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.13);
+  transform: translateY(-4px) scale(1.03);
+  background: #f0f8ff;
+}
+
+.gallery-pagination {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.prev-gallery-page {
+  background-image: url("../media/before.png");
+}
+
+.next-gallery-page {
+  background-image: url("../media/next.png");
+}
+
+.pagination-btn {
+  background-size: contain;
+  height: 40px;
+  width: 40px;
+  transition: all 0.3s;
+  border-radius: 15px;
+}
+
+.pagination-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 1px 5px rgba(12, 50, 105, 0.5);
+}
+
+.pagination-btn:active {
+  transform: translateY(1px);
+  box-shadow: 1px 5px rgba(12, 50, 105, 1);
+}
+
+.hidden {
+  display: none;
+}

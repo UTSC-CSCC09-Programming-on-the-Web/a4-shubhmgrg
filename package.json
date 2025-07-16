@@ -1,0 +1,38 @@
+{
+  "name": "a2",
+  "version": "1.0.0",
+  "description": "[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/Hc1JZ2U-) # Web Gallery: Backend",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start:dev": "nodemon app.js",
+    "format": "npx prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UTSC-CSCC09-Programming-on-the-Web/a2-shubhmgrg.git"
+  },
+  "author": "Shubham Garg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UTSC-CSCC09-Programming-on-the-Web/a2-shubhmgrg/issues"
+  },
+  "homepage": "https://github.com/UTSC-CSCC09-Programming-on-the-Web/a2-shubhmgrg#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "body-parser": "^2.2.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^2.0.1",
+    "sequelize": "^6.37.7",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.28.0",
+    "eslint": "^9.28.0",
+    "globals": "^16.2.0",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.5.3"
+  }
+}
