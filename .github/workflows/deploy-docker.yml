@@ -13,7 +13,7 @@ jobs:
     - name: Checkout code
       uses: appleboy/ssh-action@v1
       with:
-        host: "134.122.46.244"
+        host: "138.197.143.186"
         username: root
         key: ${{ secrets.KEY }}
         port: 22
