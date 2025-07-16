@@ -1,0 +1,34 @@
+version: "3.7"
+
+services:
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    container_name: nginx-proxy
+    ports:
+      - "80:3000"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - ./certs:/etc/nginx/certs
+      - ./vhost:/etc/nginx/vhost.d
+      - ./html:/usr/share/nginx/html
+  nginx-proxy-acme:
+    image: nginxproxy/acme-companion
+    container_name: nginx-proxy-acme
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./certs:/etc/nginx/certs
+      - ./vhost:/etc/nginx/vhost.d
+      - ./html:/usr/share/nginx/html
+      - ./acme:/etc/acme.sh
+    environment:
+      - DEFAULT_EMAIL=shubham.garg@mail.utoronto.ca
+  backend:
+    image: ghcr.io/uoft-utsc-cs-sandbox/backend-shubhmgrg
+    container_name: backend
+    restart: always
+    expose:
+      - 3000
+    environment:
+      - VIRTUAL_HOST=api.webgallery.shubham.taggit.tech
+      - LETSENCRYPT_HOST=api.webgallery.shubham.taggit.tech
